@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="signup-section">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="password" id="signup-password" placeholder="Password">
+            <input type="password" id="signup-confirm-password" placeholder="Confirm Password">
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+
+        <div id="login-section" style="display: none;">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="atm-section" style="display: none;">
+            <h2>ATM Services</h2>
+            <button onclick="showBalance()" class="atm-button"><i class="fas fa-wallet"></i> Check Balance</button>
+            <button onclick="depositMoney()" class="atm-button"><i class="fas fa-plus-circle"></i> Deposit Money</button>
+            <button onclick="withdrawMoney()" class="atm-button"><i class="fas fa-minus-circle"></i> Withdraw Money</button>
+            <button onclick="changePin()" class="atm-button"><i class="fas fa-key"></i> Change PIN</button>
+            <button onclick="showHistory()" class="atm-button"><i class="fas fa-history"></i> Transaction History</button>
+            <button onclick="logout()" class="atm-button"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            <div id="atm-output" class="output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
